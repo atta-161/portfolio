@@ -6,6 +6,7 @@ import GrainyBackground from "@/components/GrainyBackground";
 import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
 import ProjectGallery from "@/components/sections/ProjectGallery";
+import SkillsShowcase from "@/components/sections/SkillsShowcase";
 
 export default function Home() {
   const mouseX = useMotionValue(0);
@@ -44,6 +45,7 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <ProjectGallery />
+        <SkillsShowcase />
       </div>
     </main>
   );
