@@ -5,6 +5,7 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 import GrainyBackground from "@/components/GrainyBackground";
 import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
+import ProjectGallery from "@/components/sections/ProjectGallery";
 
 export default function Home() {
   const mouseX = useMotionValue(0);
@@ -42,6 +43,7 @@ export default function Home() {
       <div className="relative z-10 flex flex-col pt-32 px-8">
         <HeroSection />
         <AboutSection />
+        <ProjectGallery />
       </div>
     </main>
   );
