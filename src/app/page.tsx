@@ -1,39 +1,47 @@
 "use client";
 
-import { motion } from "framer-motion";
+import React, { useEffect } from "react";
+import { motion, useMotionValue, useSpring } from "framer-motion";
+import GrainyBackground from "@/components/GrainyBackground";
+import HeroSection from "@/components/sections/HeroSection";
+import AboutSection from "@/components/sections/AboutSection";
 
 export default function Home() {
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const springConfig = { damping: 25, stiffness: 150 };
+  const smoothX = useSpring(mouseX, springConfig);
+  const smoothY = useSpring(mouseY, springConfig);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      mouseX.set(e.clientX);
+      mouseY.set(e.clientY);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, [mouseX, mouseY]);
+
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen p-8 text-center bg-black overflow-hidden font-sans">
+    <main className="relative min-h-screen w-full bg-black overflow-x-hidden selection:bg-accent selection:text-black">
+      <GrainyBackground />
+
+      {/* Cursor Follower Glow */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="space-y-6"
-      >
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white glow-hover">
-          Coming Soon
-        </h1>
-        <p className="text-xl text-muted max-w-lg mx-auto">
-          A premium artistic portfolio showcasing AI, Web & Mobile experiments. 
-          Inspired by minimalism and motion.
-        </p>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
-          className="pt-10"
-        >
-          <div className="inline-block px-6 py-2 border border-white/20 rounded-full text-sm font-medium hover:border-white transition-colors cursor-pointer">
-            Explore Projects
-          </div>
-        </motion.div>
-      </motion.div>
-      
-      {/* Background Polish */}
-      <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-accent/20 blur-[120px] rounded-full" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-500/10 blur-[120px] rounded-full" />
+        className="fixed top-0 left-0 h-[400px] w-[400px] rounded-full bg-accent/10 blur-[120px] pointer-events-none z-[-10]"
+        style={{
+          x: smoothX,
+          y: smoothY,
+          translateX: "-50%",
+          translateY: "-50%",
+        }}
+      />
+
+      <div className="relative z-10 flex flex-col pt-32 px-8">
+        <HeroSection />
+        <AboutSection />
       </div>
     </main>
   );
