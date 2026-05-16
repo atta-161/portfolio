@@ -7,6 +7,8 @@ import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
 import ProjectGallery from "@/components/sections/ProjectGallery";
 import SkillsShowcase from "@/components/sections/SkillsShowcase";
+import ExperienceTimeline from "@/components/sections/ExperienceTimeline";
+import ContactSection from "@/components/sections/ContactSection";
 
 export default function Home() {
   const mouseX = useMotionValue(0);
@@ -46,6 +48,8 @@ export default function Home() {
         <AboutSection />
         <ProjectGallery />
         <SkillsShowcase />
+        <ExperienceTimeline />
+        <ContactSection />
       </div>
     </main>
   );
