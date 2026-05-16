@@ -5,7 +5,7 @@
 ## Runtime
 | Technology | Version | Purpose |
 |------------|---------|---------|
-| Next.js | 15.1.0 | App Router framework and static production build |
+| Next.js | 15.5.18 | App Router framework and static production build |
 | React | ^19.0.0 | UI runtime |
 | TypeScript | ^5 | Static typing |
 | Tailwind CSS | ^3.4.1 | Utility-first styling and responsive layout |
@@ -14,7 +14,7 @@
 ## Production Dependencies
 | Package | Version | Purpose |
 |---------|---------|---------|
-| `next` | 15.1.0 | Framework |
+| `next` | 15.5.18 | Framework |
 | `react` | ^19.0.0 | React runtime |
 | `react-dom` | ^19.0.0 | DOM renderer |
 | `framer-motion` | ^11.15.0 | Animation system |
@@ -32,7 +32,7 @@
 | `postcss` | ^8 | Tailwind processing |
 | `tailwindcss` | ^3.4.1 | Styling framework |
 | `eslint` | ^9 | Linting dependency |
-| `eslint-config-next` | 15.1.0 | Next.js lint rules |
+| `eslint-config-next` | 15.5.18 | Next.js lint rules |
 
 ## Scripts
 | Script | Command | Purpose |
@@ -60,4 +60,4 @@
 ## Verification Snapshot
 | Command | Result |
 |---------|--------|
-| `npm.cmd run build` | Passed on 2026-05-16; `/` prerendered static, page size 15.6 kB, first load JS 159 kB |
+| `npm.cmd run build` | Passed on 2026-05-16 with Next.js 15.5.18; `/` prerendered static, page size 15.7 kB, first load JS 156 kB |
