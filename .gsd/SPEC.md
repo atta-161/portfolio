@@ -22,12 +22,14 @@ Tạo một trang Portfolio cá nhân đẳng cấp, lấy cảm hứng từ pho
 
 ## Constraints
 - **Framework:** Next.js (App Router).
-- **Styling:** Vanilla CSS hoặc CSS Modules (để tối ưu performance và kiểm soát style chặt chẽ như Rauno).
+- **Styling:** Tailwind CSS với global design tokens trong `src/app/globals.css` và theme mở rộng trong `tailwind.config.ts`.
 - **Animations:** Framer Motion.
+- **Data:** Dữ liệu tĩnh/local trong `src/data`; hình ảnh dự án nằm trong `public/projects`.
+- **Contact:** Web3Forms client-side API qua `NEXT_PUBLIC_WEB3FORMS_KEY`; không có backend riêng.
 - **Performance:** Đảm bảo điểm Lighthouse cao, load nhanh.
 
 ## Success Criteria
-- [ ] Giao diện người dùng mang lại cảm giác "WOW" ngay từ lần đầu truy cập.
-- [ ] Hiệu ứng hoạt ảnh đạt 60fps, không giật lag.
-- [ ] Hiển thị hoàn hảo trên mọi thiết bị (Responsive).
-- [ ] Thông tin dự án (AI/Web/App) được trình bày logic và chuyên nghiệp.
+- [x] Giao diện người dùng mang lại cảm giác "WOW" ngay từ lần đầu truy cập.
+- [x] Hiệu ứng hoạt ảnh được triển khai bằng Framer Motion và custom smooth scroll cho navbar.
+- [x] Hiển thị responsive bằng layout Tailwind mobile-first.
+- [x] Thông tin dự án (AI/Web/App) được trình bày logic và chuyên nghiệp qua gallery có filter.

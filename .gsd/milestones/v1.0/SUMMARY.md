@@ -9,6 +9,7 @@
 - [x] All 6 sections: Hero, About, Projects, Skills, Experience, Contact
 - [x] Contact form via Web3Forms (no backend)
 - [x] Responsive design (mobile-first grid layouts)
+- [x] Navbar smooth section scrolling with custom easing and active section state
 
 ## Phases Completed
 
@@ -18,7 +19,7 @@
 | 2 | Core Identity (Hero & About) | Grainy background, cursor glow, hero animations, about section |
 | 3 | Project Gallery | Interactive grid, category filtering (AI/Web/App), mock data + generated images |
 | 4 | Skills & Tech Stack | Bento Grid layout, 4 skill categories, consistent silver/white aesthetic |
-| 5 | Connection & Polish | Experience timeline, Web3Forms contact form, full integration |
+| 5 | Connection & Polish | Experience timeline, Web3Forms contact form, full integration, navbar smooth scroll |
 
 ## Tech Stack
 - **Framework:** Next.js 15.1.0 (App Router)
@@ -30,7 +31,7 @@
 
 ## Metrics
 - Total commits: 13
-- Page bundle: 15.5 kB (First Load 159 kB)
+- Page bundle: 15.6 kB (First Load 159 kB)
 - Build: Static prerender, zero errors
 
 ## Architecture
