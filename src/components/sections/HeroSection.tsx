@@ -29,7 +29,7 @@ const itemVariants = {
 
 export default function HeroSection() {
   return (
-    <section className="min-h-[85vh] flex flex-col items-center justify-center relative">
+    <section id="home" className="min-h-[85vh] flex flex-col items-center justify-center relative">
       <motion.div
         variants={containerVariants}
         initial="hidden"
