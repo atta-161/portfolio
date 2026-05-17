@@ -12,8 +12,8 @@ export default function ExperienceTimeline() {
           Career Path
         </h2>
         <h3 className="text-4xl md:text-5xl font-bold text-white tracking-tighter">
-          Where I&apos;ve been <br />
-          <span className="text-muted">and what I&apos;ve built.</span>
+          From AI foundations <br />
+          <span className="text-muted">to device-facing software.</span>
         </h3>
       </div>
 

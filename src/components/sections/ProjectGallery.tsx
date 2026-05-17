@@ -20,11 +20,11 @@ export default function ProjectGallery() {
       <div className="flex flex-col md:flex-row justify-between items-end gap-8">
         <div className="space-y-4">
           <h2 className="text-accent text-sm font-mono uppercase tracking-widest">
-            Selected Works
+            Selected Work
           </h2>
           <h3 className="text-4xl md:text-5xl font-bold text-white tracking-tighter">
-            Digital craftsmanship <br />
-            <span className="text-muted">at its finest.</span>
+            Practical systems <br />
+            <span className="text-muted">with AI at the edge.</span>
           </h3>
         </div>
 

@@ -5,39 +5,33 @@ export interface Project {
   category: "AI" | "Web" | "App";
   tags: string[];
   image: string;
-  demoUrl: string;
-  githubUrl: string;
+  demoUrl?: string;
+  githubUrl?: string;
 }
 
 export const PROJECTS: Project[] = [
   {
     id: "1",
-    title: "Neural Art Generator",
-    description: "An AI-powered system that transforms text prompts into high-end abstract digital art using custom diffusion models.",
+    title: "YOLO Vision Detection Pipeline",
+    description: "Computer-vision workflow for object detection experiments, from dataset preparation and model iteration to practical inference checks.",
     category: "AI",
-    tags: ["Python", "PyTorch", "Next.js", "Tailwind"],
+    tags: ["Python", "YOLO", "OpenCV", "Image Recognition"],
     image: "/projects/ai.png",
-    demoUrl: "https://demo.example.com/neural-art",
-    githubUrl: "https://github.com/example/neural-art",
   },
   {
     id: "2",
-    title: "E-commerce Engine",
-    description: "A high-performance e-commerce platform built with Next.js 15, featuring real-time inventory and glassmorphism UI.",
+    title: "AI Portfolio Platform",
+    description: "A recruiter-focused portfolio built with Next.js and Framer Motion to present software, AI, and systems experience with fast static delivery.",
     category: "Web",
-    tags: ["Next.js", "TypeScript", "Prisma", "Stripe"],
+    tags: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
     image: "/projects/web.png",
-    demoUrl: "https://demo.example.com/ecommerce",
-    githubUrl: "https://github.com/example/ecommerce",
   },
   {
     id: "3",
-    title: "Health Tracker Pro",
-    description: "A comprehensive health monitoring application with interactive activity rings and personalized wellness insights.",
+    title: "IoT Positioning & Telemetry Toolkit",
+    description: "Software and algorithm work around embedded positioning, MQTT-style device communication, and data flows close to real hardware constraints.",
     category: "App",
-    tags: ["React Native", "Expo", "Firebase", "Victory"],
+    tags: ["Python", "Algorithms", "MQTT", "Embedded"],
     image: "/projects/app.png",
-    demoUrl: "https://demo.example.com/health-tracker",
-    githubUrl: "https://github.com/example/health-tracker",
   },
 ];

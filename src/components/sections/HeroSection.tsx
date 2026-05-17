@@ -22,12 +22,16 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.8,
-      ease: [0.215, 0.61, 0.355, 1], // Custom cubic-bezier for Rauno-style feel
+      ease: [0.215, 0.61, 0.355, 1],
     },
   },
 };
 
 export default function HeroSection() {
+  function scrollToProjects() {
+    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <section id="home" className="min-h-[85vh] flex flex-col items-center justify-center relative">
       <motion.div
@@ -36,31 +40,33 @@ export default function HeroSection() {
         animate="visible"
         className="text-center max-w-4xl"
       >
-        <motion.p 
-          variants={itemVariants} 
+        <motion.p
+          variants={itemVariants}
           className="text-accent text-sm font-mono tracking-widest uppercase mb-4"
         >
-          AnTuan — Portfolios 2026
+          Tieu An Tuan (Atta) - AI & Software Engineer
         </motion.p>
-        
-        <motion.h1 
+
+        <motion.h1
           variants={itemVariants}
           className="text-5xl md:text-8xl font-bold tracking-tighter text-white mb-8"
         >
-          Crafting high-end <br />
-          <span className="text-white/40">digital experiences</span> <br />
-          with AI and code.
+          Building reliable <br />
+          <span className="text-white/40">software systems</span> <br />
+          with AI.
         </motion.h1>
 
         <motion.div variants={itemVariants} className="pt-4">
-          <button className="group relative px-8 py-3 bg-white text-black font-medium rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95">
-            <span className="relative z-10">Explore Projects</span>
+          <button
+            onClick={scrollToProjects}
+            className="group relative px-8 py-3 bg-white text-black font-medium rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95"
+          >
+            <span className="relative z-10">View Selected Work</span>
             <div className="absolute inset-0 bg-accent/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
           </button>
         </motion.div>
       </motion.div>
 
-      {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

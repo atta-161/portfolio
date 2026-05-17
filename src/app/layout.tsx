@@ -15,8 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Personal Portfolio | AI & Web Developer",
-  description: "A showcase of AI projects, web applications, and mobile apps with premium artistic aesthetics.",
+  title: "Atta - Portfolio",
+  description:
+    "Portfolio of an AI & Software Engineer focused on Python, computer vision, embedded algorithms, IoT, and full-stack product work.",
 };
 
 export default function RootLayout({

@@ -1,6 +1,6 @@
 ﻿## Current Position
 - **Phase**: 5 (completed)
-- **Task**: v1.0 complete; documentation refreshed from current source
+- **Task**: recruiter repositioning pass started
 - **Status**: Verified
 
 ## Last Session Summary
@@ -16,7 +16,14 @@ Phase 5 executed successfully. Experience Timeline (4 mock entries with scroll-r
 - Added `.gsd/ARCHITECTURE.md` and `.gsd/STACK.md` from the current codebase map.
 - Updated `.gsd/SPEC.md`, `.gsd/REQUIREMENTS.md`, `.gsd/ROADMAP.md`, `.gsd/DECISIONS.md`, `.gsd/JOURNAL.md`, `.gsd/TODO.md`, and `.gsd/milestones/v1.0/SUMMARY.md` to match the current project state.
 
+## 2026-05-17 Recruiter Repositioning Pass
+- Rewrote Hero, About, Projects, Skills, Experience, metadata, and Footer copy around AI/software roles.
+- Positioning now emphasizes HCMUS AI background, Python software, embedded positioning algorithms, robotics, Linux, MQTT, YOLO, computer vision, full-stack, and practical LLM interest.
+- Project cards now support confidential/private work by showing "Case details on request" when no public links are provided.
+- Verification: `npm.cmd run build` passed with Next.js 15.5.18.
+
 ## Next Steps
-1. Replace mock portfolio content with real personal project, skill, and experience data.
-2. Add real social/profile URLs in `Footer.tsx`.
-3. Configure `NEXT_PUBLIC_WEB3FORMS_KEY` in `.env.local` for live contact submissions.
+1. Replace anonymized company labels with public company names if they are safe to disclose.
+2. Add real GitHub/LinkedIn URLs in `Footer.tsx`.
+3. Add public project links or short case-study pages for the three selected projects.
+4. Configure `NEXT_PUBLIC_WEB3FORMS_KEY` in `.env.local` for live contact submissions.

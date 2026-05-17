@@ -10,38 +10,38 @@ export interface ExperienceItem {
 export const EXPERIENCES: ExperienceItem[] = [
   {
     id: "1",
-    title: "AI Engineer",
-    company: "TechVision Labs",
-    period: "2024 — Present",
+    title: "Software & Algorithm Engineer",
+    company: "Embedded positioning company",
+    period: "2025 - Present",
     description:
-      "Leading development of custom NLP pipelines and computer vision models for enterprise clients. Spearheading research into generative AI applications.",
-    tags: ["PyTorch", "LangChain", "FastAPI", "AWS"],
+      "Working on software and algorithm tasks for embedded positioning products, with exposure to IoT-style systems and practical AI-related project work.",
+    tags: ["Python", "Algorithms", "Embedded", "Positioning", "IoT"],
   },
   {
     id: "2",
-    title: "Full-Stack Developer",
-    company: "Digital Horizon Agency",
-    period: "2022 — 2024",
+    title: "Robotics Software Engineer",
+    company: "Robotics / IoT company",
+    period: "Previous role",
     description:
-      "Architected and shipped high-traffic web applications using Next.js and Node.js. Mentored junior developers and established code review practices.",
-    tags: ["Next.js", "TypeScript", "PostgreSQL", "Docker"],
+      "Built and maintained software around robotics workflows, Linux environments, MQTT communication, and YOLO-based image recognition experiments.",
+    tags: ["Linux", "MQTT", "YOLO", "Computer Vision", "Robotics"],
   },
   {
     id: "3",
-    title: "Frontend Developer",
-    company: "Starter Studio",
-    period: "2021 — 2022",
+    title: "AI Graduate - Good Classification",
+    company: "University of Science, VNU-HCM",
+    period: "Graduated",
     description:
-      "Built responsive interfaces for early-stage startups. Focused on performance optimization and pixel-perfect implementations from Figma designs.",
-    tags: ["React", "Tailwind CSS", "Figma", "Vercel"],
+      "Graduated with a Good classification in Artificial Intelligence, building a foundation in machine learning, algorithms, and software engineering.",
+    tags: ["AI", "Machine Learning", "Algorithms", "Python"],
   },
   {
     id: "4",
-    title: "Freelance Developer",
-    company: "Self-employed",
-    period: "2020 — 2021",
+    title: "Full-Stack & AI Practice",
+    company: "Personal projects",
+    period: "Ongoing",
     description:
-      "Delivered custom websites and automation tools for small businesses. Gained deep experience in client communication and project management.",
-    tags: ["JavaScript", "Python", "WordPress", "Stripe"],
+      "Developing portfolio-grade projects that combine Python services, modern web interfaces, computer vision, and practical LLM workflows.",
+    tags: ["Next.js", "FastAPI", "LLM", "OpenCV"],
   },
 ];

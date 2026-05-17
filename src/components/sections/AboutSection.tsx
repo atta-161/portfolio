@@ -15,30 +15,30 @@ export default function AboutSection() {
       >
         <div className="space-y-4">
           <h2 className="text-accent text-sm font-mono uppercase tracking-widest">
-            Behind the code
+            Profile
           </h2>
           <p className="text-2xl md:text-3xl leading-relaxed text-white/90">
-            I&apos;m a designer-developer hybrid passionate about building 
-            <span className="text-white font-medium"> beautiful, high-performance web applications</span>. 
-            My work lives at the intersection of aesthetic precision and technical robustness.
+            I&apos;m an AI graduate with Good classification from HCMUS building
+            <span className="text-white font-medium"> Python-first software, embedded algorithms, and computer vision systems</span>.
+            My current work sits close to real devices: positioning logic, IoT data, and production-minded software.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 pt-8 border-t border-white/5">
           <div className="space-y-4">
-            <h3 className="text-white font-medium">The Vision</h3>
+            <h3 className="text-white font-medium">Engineering Ground</h3>
             <p className="text-muted leading-relaxed">
-              Every pixel and every line of code should serve a purpose. 
-              I strive for minimalist designs that don&apos;t compromise on functionality, 
-              focusing on micro-interactions that make digital experiences feel alive.
+              I have worked across embedded positioning software, robotics, Linux-based workflows,
+              MQTT communication, and YOLO image recognition. That mix gives me a practical view
+              of software that has to survive beyond a demo.
             </p>
           </div>
           <div className="space-y-4">
-            <h3 className="text-white font-medium">The Strategy</h3>
+            <h3 className="text-white font-medium">Direction</h3>
             <p className="text-muted leading-relaxed">
-              By combining AI-driven development with traditional engineering, 
-              I build scalable solutions that are ready for the future. 
-              Efficiency, accessibility, and speed are at the core of my workflow.
+              I&apos;m looking for roles around Python software engineering, full-stack product work,
+              or AI engineering with a strong computer-vision focus. I&apos;m also interested in
+              practical LLM systems when they connect to real product problems.
             </p>
           </div>
         </div>

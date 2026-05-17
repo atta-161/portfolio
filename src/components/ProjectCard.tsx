@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Lock } from "lucide-react";
 import { Project } from "@/data/projects";
 
 interface ProjectCardProps {
@@ -11,6 +11,8 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
+  const hasLinks = Boolean(project.demoUrl || project.githubUrl);
+
   return (
     <motion.div
       layout
@@ -29,22 +31,32 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-          <a
-            href={project.demoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 bg-white text-black rounded-full hover:scale-110 active:scale-95 transition-transform"
-          >
-            <ExternalLink size={20} />
-          </a>
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 bg-black/60 text-white border border-white/10 rounded-full hover:scale-110 active:scale-95 transition-transform"
-          >
-            <Github size={20} />
-          </a>
+          {project.demoUrl && (
+            <a
+              href={project.demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 bg-white text-black rounded-full hover:scale-110 active:scale-95 transition-transform"
+            >
+              <ExternalLink size={20} />
+            </a>
+          )}
+          {project.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 bg-black/60 text-white border border-white/10 rounded-full hover:scale-110 active:scale-95 transition-transform"
+            >
+              <Github size={20} />
+            </a>
+          )}
+          {!hasLinks && (
+            <div className="flex items-center gap-2 px-4 py-2 bg-black/70 text-white/70 border border-white/10 rounded-full text-xs font-medium">
+              <Lock size={14} />
+              Case details on request
+            </div>
+          )}
         </div>
       </div>
 
