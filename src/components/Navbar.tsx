@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -17,6 +17,8 @@ const easeInOutCubic = (t: number) =>
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
+  const isProgrammaticScroll = useRef(false);
+  const animationFrame = useRef<number | null>(null);
 
   useEffect(() => {
     const sectionIds = navItems.map((item) => item.id);
@@ -28,7 +30,7 @@ export default function Navbar() {
 
       const observer = new IntersectionObserver(
         ([entry]) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting && !isProgrammaticScroll.current) {
             setActiveSection(id);
           }
         },
@@ -49,7 +51,7 @@ export default function Navbar() {
     if (target === null) return;
 
     setActiveSection(id);
-    smoothScrollTo(target);
+    smoothScrollTo(target, id);
   }
 
   function getSectionTop(id: string) {
@@ -60,7 +62,13 @@ export default function Navbar() {
     return Math.max(el.getBoundingClientRect().top + window.scrollY - navOffset, 0);
   }
 
-  function smoothScrollTo(targetY: number) {
+  function smoothScrollTo(targetY: number, targetId: string) {
+    if (animationFrame.current) {
+      cancelAnimationFrame(animationFrame.current);
+    }
+
+    isProgrammaticScroll.current = true;
+
     const startY = window.scrollY;
     const distance = targetY - startY;
     const duration = Math.min(Math.max(Math.abs(distance) * 0.55, 450), 1100);
@@ -73,11 +81,18 @@ export default function Navbar() {
       window.scrollTo(0, startY + distance * easeInOutCubic(progress));
 
       if (progress < 1) {
-        requestAnimationFrame(step);
+        animationFrame.current = requestAnimationFrame(step);
+      } else {
+        setActiveSection(targetId);
+        animationFrame.current = null;
+
+        window.setTimeout(() => {
+          isProgrammaticScroll.current = false;
+        }, 120);
       }
     };
 
-    requestAnimationFrame(step);
+    animationFrame.current = requestAnimationFrame(step);
   }
 
   return (

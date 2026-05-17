@@ -27,9 +27,33 @@ const itemVariants = {
   },
 };
 
+const easeInOutCubic = (t: number) =>
+  t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
 export default function HeroSection() {
   function scrollToProjects() {
-    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+    const projects = document.getElementById("projects");
+    if (!projects) return;
+
+    const navOffset = 96;
+    const targetY = Math.max(projects.getBoundingClientRect().top + window.scrollY - navOffset, 0);
+    const startY = window.scrollY;
+    const distance = targetY - startY;
+    const duration = Math.min(Math.max(Math.abs(distance) * 0.55, 450), 1100);
+    const startTime = performance.now();
+
+    const step = (currentTime: number) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+
+      window.scrollTo(0, startY + distance * easeInOutCubic(progress));
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      }
+    };
+
+    requestAnimationFrame(step);
   }
 
   return (

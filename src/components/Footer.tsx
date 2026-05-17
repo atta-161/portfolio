@@ -8,7 +8,7 @@ export default function Footer() {
           © {new Date().getFullYear()} Atta.
         </div>
         <div className="flex gap-8 text-sm text-muted">
-          <a href="mailto:[EMAIL_ADDRESS]" className="hover:text-white transition-colors">Email</a>
+          <a href="mailto:tieuantuan.mx@gmail.com" className="hover:text-white transition-colors">Email</a>
           <a href="https://github.com/atta-161" className="hover:text-white transition-colors">GitHub</a>
           <a href="https://www.linkedin.com/in/atta161/" className="hover:text-white transition-colors">LinkedIn</a>
         </div>
